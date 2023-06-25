@@ -1,0 +1,1 @@
+import {Caprasimo} from next/font/google;

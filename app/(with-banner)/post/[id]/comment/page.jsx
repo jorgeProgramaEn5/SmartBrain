@@ -1,4 +1,9 @@
 import { resolve } from "styled-jsx/css";
+import Image from 'next/image'
+
+const imageLoader = ({ src, width, quality }) => {
+ return `https://api.dicebear.com/6.x/pixel-art/svg?seed=${comment.name}`
+}
 
 const fetchComments = async (id)=>{
     await new Promise(resolve => setTimeout(resolve, 3000))
@@ -23,6 +28,12 @@ export default async function comments({params}) {
         <ul className=" mt-1 p-3 w-100 bg-primary-400">
             {comments.map(comment =>(
                 <li key={comment.id}>
+                    <Image 
+                        src={`https://api.dicebear.com/6.x/pixel-art/svg?seed=${comment.name}`} 
+                        alt={`image-${comment.name}`} 
+                        width={50}
+                        height={50}
+                    />
                     <h2 className=" pb-2 text-sm uppercase">{comment.name}</h2>
                     <p className='pb-1 text-xs'>{comment.body}</p>
                 </li>
