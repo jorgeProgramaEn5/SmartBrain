@@ -22,7 +22,7 @@ export function Navegation() {
             <nav className="bg-white w-full z-20 top-0 left-0 border-b border-gray-200">
                 <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-4 px-24">
                     <Link href="/" className="flex items-center">
-                      <div className="w-[60px] h-[60px] rounded-full">
+                      <div className="w-[60px] h-[60px] rounded-full bg-fourth-100 p-1 mr-1">
                         <Image src={logo} className="w-full h-full" alt="smart brain Logo"/>
                       </div>
                       <div>

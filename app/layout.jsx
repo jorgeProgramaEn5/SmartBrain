@@ -1,5 +1,8 @@
-import { Navegation } from "../components/Navegation"
-import '../styles/globals.css'
+import { Navegation } from "../components/Navegation";
+import { Playfair_Display } from 'next/font/google';
+import '../styles/globals.css';
+
+const playDisplay = Playfair_Display({ subsets: ['latin'] });
 
 export default function RootLayout({ children }) {
   return (
@@ -26,7 +29,7 @@ export default function RootLayout({ children }) {
           sizes="any"
         />
       </head>
-      <body>
+      <body className={playDisplay.className}>
         <Navegation/>
         {children}
       </body>
